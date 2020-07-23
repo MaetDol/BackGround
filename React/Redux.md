@@ -156,3 +156,8 @@ react-redux에서도 해당 방법을 권장하고 있습니다.
 ===========
 props로 받아와 사용하면 됩니다.
 App.js같이 불러와 사용할때는 해당 컴포넌트가 아닌 컨테이너 컴포넌트를 사용하면 됩니다.
+
+\
+레퍼런스:
+- https://react-redux.js.org/api/connect
+- https://react-redux.js.org/using-react-redux/connect-mapdispatch
