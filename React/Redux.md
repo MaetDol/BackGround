@@ -113,7 +113,7 @@ const store = createStore( reducer );
 
 5.컨테이너 생성 후 dispatch, state 전달 
 ============
-해당 컴포넌트를 리덕스와 이어주기 위해 react-redux 에서 제공해주는 connect를 이용해 export 해줍니다.
+해당 컴포넌트를 리덕스와 이어주기 위해 react-redux 에서 제공해주는 `connect`를 이용해 `export` 해줍니다.
 ```javascript
 // containers/ItemContainer.js
 const ItemContainer = ({ items, insert, remove, toggle }) => {
@@ -141,7 +141,7 @@ export default connect(
   mapDispatchToProps, // props로 전달해줄 디스패치들
 )( ItemContainer );   // 현재 컨테이너
 ```
-해당 방법 말고도 bindActionCreators를 이용해 아래와 같이 작성할 수도 있습니다.
+액션 생성 팩토리 함수인 `mapDispatchToProps`대신 `bindActionCreators`를 이용해 아래와 같이 작성할 수도 있습니다.
 ```javascript
 dispatch => bindActionCreators({
   insert,
@@ -154,7 +154,7 @@ react-redux에서도 해당 방법을 권장하고 있습니다.
 
 6.해당 컴포넌트에서 props로 값을 받아와 사용하기
 ===========
-props로 받아와 사용하면 됩니다.
+`props`로 받아와 사용하면 됩니다.
 App.js같이 불러와 사용할때는 해당 컴포넌트가 아닌 컨테이너 컴포넌트를 사용하면 됩니다.
 
 \
