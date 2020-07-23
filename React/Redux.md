@@ -62,23 +62,23 @@ const initState = {
 function reducer( state = initState, action ) {
   // action.type 값에 따라 수행할 행동을 정한다
   // 이때도 성능을 위해 불변성을 지켜줘야 한다.
-  switch( action.type  ) {
+  switch( action.type ) {
   case TOGGLE:
     return {
       ...state,
-      state.arr.map( item =>
+      items: state.items.map( item =>
         item.id === action.id ? { ...item, on: !item.on } : item
       )
     };
   case INSERT:
     return {
       ...state,
-      state.arr.concat( action.item )
+      items: state.items.concat( action.item )
     };
   case REMOVE:
     return {
       ...state,
-      state.arr.filter( item => item.id !== action.id )
+      items: state.items.filter( item => item.id !== action.id )
     };
   default:
     return state;
